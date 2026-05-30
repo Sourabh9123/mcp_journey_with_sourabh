@@ -18,19 +18,21 @@ standard way so many clients and many servers can work together.
 
 Start here:
 
+- [How to read this repository](HOW_TO_READ.md)
 - [Docs course index](docs/README.md)
 - [Examples index](examples/README.md)
 
 Core chapters:
 
-1. [Why MCP Exists](docs/01-why-mcp.md)
-2. [Architecture And Flow](docs/02-architecture-and-flow.md)
-3. [Resources, Tools, Prompts, Roots, Sampling](docs/03-primitives.md)
-4. [JSON-RPC And Lifecycle](docs/04-json-rpc-and-lifecycle.md)
-5. [Transports: stdio And Streamable HTTP](docs/05-transports.md)
-6. [Building An MCP Server](docs/06-building-a-server.md)
-7. [Design Guidelines](docs/07-design-guidelines.md)
-8. [Security And Trust](docs/08-security.md)
+1. [Diagrams And Flows](docs/00-diagrams-and-flows.md)
+2. [Why MCP Exists](docs/01-why-mcp.md)
+3. [Architecture And Flow](docs/02-architecture-and-flow.md)
+4. [Resources, Tools, Prompts, Roots, Sampling](docs/03-primitives.md)
+5. [JSON-RPC And Lifecycle](docs/04-json-rpc-and-lifecycle.md)
+6. [Transports: stdio And Streamable HTTP](docs/05-transports.md)
+7. [Building An MCP Server](docs/06-building-a-server.md)
+8. [Design Guidelines](docs/07-design-guidelines.md)
+9. [Security And Trust](docs/08-security.md)
 
 Examples:
 

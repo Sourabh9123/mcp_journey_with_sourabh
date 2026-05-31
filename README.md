@@ -27,7 +27,7 @@ Core chapters:
 1. [Diagrams And Flows](docs/00-diagrams-and-flows.md)
 2. [Why MCP Exists](docs/01-why-mcp.md)
 3. [Architecture And Flow](docs/02-architecture-and-flow.md)
-4. [Resources, Tools, Prompts, Roots, Sampling](docs/03-primitives.md)
+4. [Resources, Tools, Prompts, Roots, Sampling, Elicitation](docs/03-primitives.md)
 5. [JSON-RPC And Lifecycle](docs/04-json-rpc-and-lifecycle.md)
 6. [Transports: stdio And Streamable HTTP](docs/05-transports.md)
 7. [Building An MCP Server](docs/06-building-a-server.md)
@@ -73,6 +73,8 @@ free-form private conversation with the model.
 - Use **tools** for actions: search, create, update, run, query, send.
 - Use **resources** for context: docs, files, schemas, records, examples.
 - Use **prompts** for reusable user-selected workflows.
+- Use client features such as **roots**, **sampling**, and **elicitation** when a
+  server needs allowed locations, model help, or more user input.
 - Keep tool descriptions short and clear.
 - Do not put huge documentation inside tool docstrings. Put detailed reference
   material in resources, then expose a tool that acts on specific inputs.

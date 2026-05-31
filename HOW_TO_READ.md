@@ -44,7 +44,7 @@ Do not skip this page. Most MCP confusion comes from mixing up these roles.
 
 Read:
 
-- [Resources, Tools, Prompts, Roots, Sampling](docs/03-primitives.md)
+- [Resources, Tools, Prompts, Roots, Sampling, Elicitation](docs/03-primitives.md)
 
 Goal:
 
@@ -62,6 +62,7 @@ Simple rule:
 | Reuse a workflow | Prompt |
 | Share allowed project locations | Roots |
 | Let a server ask the client for model help | Sampling |
+| Ask the user for missing information | Elicitation |
 
 ### 4. Study The Wire Protocol
 
@@ -145,7 +146,7 @@ If you only have 30 minutes:
 1. [README.md](README.md)
 2. [Diagrams And Flows](docs/00-diagrams-and-flows.md)
 3. [Architecture And Flow](docs/02-architecture-and-flow.md)
-4. [Resources, Tools, Prompts, Roots, Sampling](docs/03-primitives.md)
+4. [Resources, Tools, Prompts, Roots, Sampling, Elicitation](docs/03-primitives.md)
 5. [Raw JSON-RPC transcript](examples/rpc-transcripts/basic-flow.md)
 6. [Transports: stdio And Streamable HTTP](docs/05-transports.md)
 
@@ -177,6 +178,7 @@ Focus on these ideas before SDK code:
 - Tools are actions.
 - Resources are context.
 - Prompts are reusable workflows.
+- Elicitation lets a server ask the client for more user input.
 - JSON-RPC is the message format.
 - stdio is usually best for local learning.
 - Streamable HTTP is usually best for remote servers.

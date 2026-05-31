@@ -1,4 +1,4 @@
-# Resources, Tools, Prompts, Roots, Sampling
+# Resources, Tools, Prompts, Roots, Sampling, Elicitation
 
 MCP has several primitives. They solve different problems. A strong MCP server
 uses the right primitive for the right job.
@@ -233,6 +233,41 @@ This is advanced. The important mental model is:
 
 This keeps model access inside the host's policy and permission layer.
 
+## Elicitation
+
+Elicitation is a client feature that lets a server ask the client to collect
+more information from the user.
+
+For example, a travel server might find two good flights and ask the user to
+confirm whether price or arrival time matters more before creating a booking.
+The server does not directly own the user interface. It asks the client for the
+extra input, and the client decides how to present that request.
+
+Use elicitation when:
+
+- A tool needs a missing required detail.
+- A risky action needs explicit confirmation.
+- The server needs a user preference before continuing.
+
+Avoid using elicitation as a substitute for clear tool schemas. If a value is
+always required, put it in the tool's input schema.
+
+## Context And Progress
+
+Some SDKs expose a request context object to server handlers. This lets a server
+send useful side-channel information through the client session, such as:
+
+- informational messages
+- debug messages
+- progress updates for long-running work
+
+For example, a server processing a large log file might report that it has read
+25%, 50%, and 75% of the file before returning the final result.
+
+Keep the boundary clear: progress messages help the host and user understand
+what is happening, while the final tool result should still contain the outcome
+the model needs for the next step.
+
 ## Quick Choice Guide
 
 | Need | Use |
@@ -242,4 +277,5 @@ This keeps model access inside the host's policy and permission layer.
 | The user wants a reusable workflow | Prompt |
 | The server needs allowed project locations | Roots |
 | The server needs the client to ask an LLM something | Sampling |
-
+| The server needs more input from the user | Elicitation |
+| The server needs to report long-running status | Context/progress |
